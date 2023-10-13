@@ -1,0 +1,60 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(212, 212, 212);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container form{
+    background-color: rgb(225, 225, 225);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 7px 7px 5px rgb(255, 255, 255), -7px -7px 5px rgb(191, 191, 191);
+}
+.container form button{
+    padding: 8px;
+    background-color: rgb(143, 143, 143);
+    border-radius: 5px;
+    width: 80px;
+    border-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: inset 5px 5px 5px white, -5px -5px 5px rgb(106, 106, 106);
+}
+.fillinput{
+    padding: 6px 10px;
+    width: 250px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: rgb(212, 212, 212);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.birthday{
+    padding: 5px 10px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: rgb(212, 212, 212);
+}
+.fillinput:focus, .birthday:focus{
+    outline: none;
+}
+.warning{
+    font-size: 10px;
+    color: red;
+    margin-left: 10px;
+}
+.container form label{
+    font-weight: bold;
+    background-color: rgb(225, 225, 225);
+}
+.container form p{
+    font-weight: bold;
+    background-color: rgb(225, 225, 225);
+    padding: 3px;
+}
