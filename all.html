@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valid Form</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(212, 212, 212);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container form {
+            background-color: rgb(225, 225, 225);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 7px 7px 5px rgb(255, 255, 255), -7px -7px 5px rgb(191, 191, 191);
+        }
+        .container form button {
+            padding: 8px;
+            background-color: rgb(143, 143, 143);
+            border-radius: 5px;
+            width: 80px;
+            border-style: none;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: inset 5px 5px 5px white, -5px -5px 5px rgb(106, 106, 106);
+        }
+        .fillinput {
+            padding: 6px 10px;
+            width: 250px;
+            border-radius: 30px;
+            border-style: none;
+            background-color: rgb(212, 212, 212);
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+        }
+        .birthday {
+            padding: 5px 10px;
+            border-radius: 30px;
+            border-style: none;
+            background-color: rgb(212, 212, 212);
+        }
+        .fillinput:focus, .birthday:focus {
+            outline: none;
+        }
+        .warning {
+            font-size: 10px;
+            color: red;
+            margin-left: 10px;
+        }
+        .container form label {
+            font-weight: bold;
+            background-color: rgb(225, 225, 225);
+        }
+        .container form p {
+            font-weight: bold;
+            background-color: rgb(225, 225, 225);
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="your-submit-url.php" method="POST">
+            <label for="name">Full name:</label><br>
+            <p class="warning" id="nameError"></p>
+            <input type="text" name="name" id="name" placeholder="Your Name" class="fillinput">
+            <br>
+            <br>
+            <label for="password">Password:</label><br>
+            <p class="warning" id="passwordError"></p>
+            <input type="password" name="password" id="password" placeholder="Password" class="fillinput">
+            <br>
+            <br>
+            <label for="email">Email:</label><br>
+            <p class="warning" id="emailError"></p>
+            <input type="email" name="email" id="email" placeholder="Your Email" class="fillinput">
+            <br>
+            <br>
+            <label for="birthday">Date of Birth:</label>
+            <input type="date" name="birthday" id="birthday" class="birthday">
+            <br>
+            <br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        let valueEmail = document.getElementById('email');
+        let outEmailWarning = document.getElementById('emailError');
+        let emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+        valueEmail.addEventListener('input', function () {
+            if (emailRegex.test(valueEmail.value)) {
+                outEmailWarning.innerText = null;
+            } else {
+                outEmailWarning.innerText = "Invalid email";
+            }
+        });
+    </script>
+</body>
+</html>
