@@ -15,17 +15,21 @@
     background-color: rgb(225, 225, 225);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 7px 7px 5px rgb(255, 255, 255), -7px -7px 5px rgb(191, 191, 191);
+    box-shadow: 5px 5px 5px rgb(255, 255, 255), -5px -5px 5px rgb(191, 191, 191);
 }
 .container form button{
     padding: 8px;
-    background-color: rgb(143, 143, 143);
     border-radius: 5px;
     width: 80px;
     border-style: none;
     cursor: pointer;
     font-weight: bold;
-    box-shadow: inset 5px 5px 5px white, -5px -5px 5px rgb(106, 106, 106);
+    box-shadow: 2px 2px 5px white, -2px -2px 5px rgb(106, 106, 106);
+}
+.container form button:hover{
+       border-top-right-radius: 20px;
+       border-bottom-left-radius: 20px;
+       transition: 0.1s;
 }
 .fillinput{
     padding: 6px 10px;
